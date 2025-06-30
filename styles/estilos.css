@@ -229,6 +229,18 @@ footer {
   line-height: 1.5;
 }
 
+/* Video */
+.video-beneficio {
+  width: 100%;       
+  max-width: 300px;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  display: block;
+}
+
+
 /* Responsive para grid de beneficios */
 @media (min-width: 768px) {
   .beneficios-cards-row {
