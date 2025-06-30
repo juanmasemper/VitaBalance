@@ -1,0 +1,293 @@
+/* variables.css (puedes separar o incluir en estilos.css) */
+:root {
+  --color-primario: #3a7bd5;
+  --color-secundario: #00d2ff;
+  --color-fondo: #f5f9ff;
+  --color-texto: #333333;
+  --color-texto-claro: #666666;
+  --color-boton: var(--color-primario);
+  --color-boton-hover: #2c5ca9;
+  --font-principal: 'Arial', sans-serif;
+
+  --espaciado-base: 1rem;
+  --border-radius: 6px;
+  --transition-duracion: 0.3s;
+}
+
+/* Reset y estilos globales */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-principal);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden; /* para evitar scroll horizontal */
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Evitar bordes laterales no deseados */
+.container, 
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 1140px; /* Mantener max ancho para container */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilos para los enlaces */
+a {
+  color: var(--color-primario);
+  text-decoration: none;  /* Quitamos el subrayado */
+  transition: color var(--transition-duracion);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-secundario);
+  outline: none;
+  text-decoration: none; /* Aseguramos que no aparezca subrayado */
+}
+
+/* Navbar */
+header {
+  background-color: var(--color-fondo);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--espaciado-base);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav a {
+  display: block;
+  margin: 0.5rem 0;
+  margin-left: 1rem;
+  font-weight: 500;
+  color: var(--color-texto);
+}
+
+nav a:hover {
+  color: var(--color-primario);
+}
+
+/* Mejorar navbar en responsive */
+.navbar-collapse {
+  background-color: var(--color-fondo);
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: var(--espaciado-base);
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+.hero .btn-success {
+  background-color: var(--color-boton);
+  border-color: var(--color-boton);
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-duracion);
+}
+
+.hero .btn-success:hover {
+  background-color: var(--color-boton-hover);
+  border-color: var(--color-boton-hover);
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Cards (ejemplo beneficios) */
+.card {
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Mejoras de responsive generales */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Beneficios - contenedor principal */
+.beneficios-container {
+  padding: 2rem 1rem;
+  max-width: 1140px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Título */
+.beneficios-container h2 {
+  text-align: center;
+  color: var(--color-primario);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* Cards de beneficios */
+.beneficios-card {
+  background-color: var(--color-fondo);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.beneficios-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Título dentro de cada card */
+.beneficios-card h3 {
+  color: var(--color-secundario);
+  margin-bottom: 1rem;
+}
+
+/* Texto */
+.beneficios-card p {
+  color: var(--color-texto-claro);
+  line-height: 1.5;
+}
+
+/* Responsive para grid de beneficios */
+@media (min-width: 768px) {
+  .beneficios-cards-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .beneficios-card {
+    flex: 1 1 calc(33.333% - 1rem);
+    margin-bottom: 0;
+  }
+}
+
+/* Testimonios - contenedor principal */
+.testimonios-container {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Título */
+.testimonios-container h2 {
+  text-align: center;
+  color: var(--color-primario);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* Testimonio individual */
+.testimonio-card {
+  background-color: var(--color-fondo);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  position: relative;
+  font-style: italic;
+  color: var(--color-texto-claro);
+}
+
+/* Nombre del autor */
+.testimonio-autor {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--color-primario);
+  text-align: right;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .testimonios-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .testimonio-card {
+    flex: 1 1 45%;
+  }
+}
