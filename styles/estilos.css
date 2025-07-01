@@ -1,4 +1,4 @@
-/* variables.css (puedes separar o incluir en estilos.css) */
+/* Variables CSS globales: Colores, tipografía y espaciados definidos para todo el sitio */
 :root {
   --color-primario: #3a7bd5;
   --color-secundario: #00d2ff;
@@ -8,6 +8,14 @@
   --color-boton: var(--color-primario);
   --color-boton-hover: #2c5ca9;
   --font-principal: 'Arial', sans-serif;
+
+  /* Agrego más variables para hacer el código aún más flexible */
+  --color-sombra: rgba(0,0,0,0.1);
+  --font-secundaria: 'Helvetica Neue', sans-serif;
+  --font-tamano-grande: 3rem;
+  --font-tamano-medio: 1.25rem;
+  --font-tamano-pequeno: 0.9rem;
+
 
   --espaciado-base: 1rem;
   --border-radius: 6px;
@@ -19,6 +27,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  /* Agrego resets globales para evitar inconsistencias */
+  margin: 0;
+  padding: 0;
 }
 
 /* Estilo para el body */
@@ -42,8 +53,8 @@ main {
 /* Evitar bordes laterales no deseados */
 .container, 
 .container-fluid {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
   max-width: 1140px; /* Mantener max ancho para container */
   margin-left: auto;
   margin-right: auto;
@@ -245,7 +256,7 @@ footer {
 
 
 /* Responsive para grid de beneficios */
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .beneficios-cards-row {
     display: flex;
     justify-content: space-between;
@@ -255,6 +266,10 @@ footer {
   .beneficios-card {
     flex: 1 1 calc(33.333% - 1rem);
     margin-bottom: 0;
+  }
+
+  .video-beneficio {
+    max-width: 100%;
   }
 }
 
