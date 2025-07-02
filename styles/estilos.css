@@ -273,6 +273,33 @@ footer {
   }
 }
 
+/* Tabla de beneficios */
+.tabla-beneficios {
+  border: 1px solid var(--color-primario);
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.tabla-beneficios th,
+.tabla-beneficios td {
+  padding: 1rem;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+}
+
+.tabla-beneficios thead {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .tabla-beneficios {
+    font-size: 0.9rem;
+  }
+}
+
+
 /* Testimonios - contenedor principal */
 .testimonios-container {
   padding: 2rem 1rem;
