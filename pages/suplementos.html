@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VitaBalance | Suplementos Naturales</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./styles/estilos.css">
+    <link rel="stylesheet" href="../styles/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    
+
     <!-- Header -->
     <header class="bg-light py-3 shadow-sm">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <!-- Barra de navegación de la página web -->
-                <a class="navbar-brand fw-bold" href="./index.html">VitaBalance</a>
+                <a class="navbar-brand fw-bold" href="../index.html">VitaBalance</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -24,19 +24,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Inicio</a> <!-- Enlace a la página de inicio -->
+                            <a class="nav-link" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/beneficios.html">Beneficios</a> <!-- Enlace a la página de beneficios -->
+                            <a class="nav-link" href="../pages/beneficios.html">Beneficios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/suplementos.html">Suplementos</a> <!-- Enlace a la página de suplementos -->
+                            <a class="nav-link" href="./suplementos.html">Suplementos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/testimonios.html">Testimonios</a> <!-- Enlace a la página de testimonios -->
+                            <a class="nav-link" href="../pages/testimonios.html">Testimonios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/contacto.html">Contacto</a> <!-- Enlace a la página de contacto -->
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -45,20 +45,52 @@
     </header>
 
     <!-- Main -->
-    <main>
-        <!-- Contenido principal de la página web -->
-        <section class="hero d-flex align-items-center text-center text-white" style="background-image: url('assets/hero.jpg'); height: 90vh; background-size: cover; background-position: center;">
-            <div class="container">
-                <!-- Contenido de la sección para la imágen y titulo de presentación -->
-                <h2 class="display-4">Energía y Bienestar Natural</h2>
-                <p class="lead">Descubrí los beneficios de nuestros suplementos naturales para tu salud diaria.</p>
-                <a href="./pages/beneficios.html" class="btn btn-success mt-3">Conoce más</a> <!-- Enlace a la página de beneficios -->
+    <main class="container my-5">
+        
+        <!-- Sección de Tabla de Comparación -->
+        <section id="tabla-beneficios" class="py-5">
+        <div class="container">
+            <h3 class="text-center mb-4">Comparativa de Suplementos</h3>
+            <div class="table-responsive">
+            <!-- Tabla de Comparación -->
+            <table class="table tabla-beneficios text-center">
+                <thead class="table-primary">
+                <tr>
+                    <th>Suplemento</th>
+                    <th>Función</th>
+                    <th>Ingredientes</th>
+                    <th>Presentación</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Vital Plus</td>
+                    <td>Energía diaria</td>
+                    <td>Ginseng, Vit. B12</td>
+                    <td>Cápsulas</td>
+                </tr>
+                <tr>
+                    <td>InmunoMax</td>
+                    <td>Defensas naturales</td>
+                    <td>Zinc, Vit. C</td>
+                    <td>Sachet en polvo</td>
+                </tr>
+                <tr>
+                    <td>Balance Zen</td>
+                    <td>Bienestar mental</td>
+                    <td>Melisa, Magnesio</td>
+                    <td>Gotas</td>
+                </tr>
+                </tbody>
+            </table>
             </div>
+        </div>
         </section>
+
 
     </main>
 
-    <!-- Pie de página -->
+    <!-- Footer -->
     <footer id="contacto" class="bg-dark text-white py-4">
         <div class="container text-center">
             <p>Contacto: info@vitabalance.com</p>
