@@ -1,0 +1,17 @@
+// == Base Styles == //
+@use "./partials/base/reset";
+@use "./partials/base/tipografia";
+
+// == Components == //
+@use "./partials/components/navbar";
+@use "./partials/components/hero";
+@use "./partials/components/buttons";
+@use "./partials/components/beneficios";
+@use "./partials/components/suplementos";
+@use "./partials/components/testimonios";
+@use "./partials/components/footer";
+
+// == Utilities == //
+@use "./partials/utilities/variables";
+@use "./partials/utilities/mixins";
+@use "./partials/utilities/extend";

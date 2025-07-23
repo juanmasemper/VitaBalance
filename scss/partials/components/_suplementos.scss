@@ -1,0 +1,26 @@
+@use "../utilities/variables" as *;
+
+/* Tabla de beneficios de los suplementos */
+.tabla-beneficios {
+  border: 1px solid $color-primario;
+  background-color: #fff;
+  border-radius: $border-radius;
+  overflow: hidden;
+  /* Ancho y alto */
+  th,
+  td {
+        padding: 1rem;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+    }
+    thead {
+        background-color: $color-primario;
+        color: white;
+    }
+}
+
+@media (max-width: 768px) {
+  .tabla-beneficios {
+    font-size: 0.9rem;
+  }
+}

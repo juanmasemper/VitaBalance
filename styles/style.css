@@ -1,0 +1,369 @@
+@charset "UTF-8";
+/* Reset y estilos globales */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* Agrego resets globales para evitar inconsistencias */
+  margin: 0;
+  padding: 0;
+}
+
+/* Mejoras de responsive generales */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+/* Variables CSS globales: Colores, tipografia y espaciados definidos para todo el sitio */
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+/* Navbar */
+/* Estilos para los enlaces */
+a {
+  color: #3a7bd5; /* Usamos la variable de color primario */
+  text-decoration: none; /* Quitamos el subrayado */
+  transition: color 0.3s; /* Usamos la variable de duración de transición */
+}
+a :hover,
+a :focus {
+  color: #00d2ff; /* Cambiamos el color al pasar el mouse */
+  outline: none; /* Quitamos el borde de enfoque */
+  text-decoration: none; /* Aseguramos que no aparezca subrayado */
+}
+
+header {
+  background-color: #f5f9ff; /* Usamos la variable de color de fondo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem; /* Usamos la variable de espaciado base */
+}
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav a {
+  display: block;
+  margin: 0.5rem 0;
+  margin-left: 1rem;
+  font-weight: 500;
+  color: #333333; /* Usamos la variable de color de texto */
+}
+nav a :hover {
+  color: #3a7bd5; /* Cambiamos el color al pasar el mouse */
+}
+
+/* Mejorar navbar en responsive */
+.navbar-collapse {
+  background-color: #f5f9ff; /* Usamos la variable de color de fondo */
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+/* Mixin */
+/* Estilo para el body */
+body {
+  font-family: "Arial", sans-serif;
+  color: #333333;
+  background-color: #f5f9ff;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden; /* para evitar scroll horizontal */
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Evitar bordes laterales no deseados */
+.container,
+.container-fluid {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1140px; /* Mantener max ancho para container */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Animacion */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Estilos para el contenido de la pantalla principal */
+.hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+  animation: slideIn 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+  animation: slideIn 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.btn-base, .more-button, .buy-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success {
+  background-color: #3a7bd5;
+  border-color: #3a7bd5;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.btn-success:hover {
+  background-color: #2c5ca9;
+  border-color: #2c5ca9;
+}
+
+.more-button {
+  background-color: #00d2ff;
+  color: white;
+}
+.more-button:hover {
+  background-color: #00a8cc;
+}
+
+.buy-button {
+  background-color: #3a7bd5;
+  color: white;
+}
+.buy-button:hover {
+  background-color: rgb(38.6610878661, 98.4937238494, 181.3389121339);
+}
+
+/* Beneficios - contenedor principal */
+.beneficios-container {
+  padding: 2rem 1rem;
+  max-width: 1140px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Título de la sección beneficios */
+  /* Cards de beneficios */
+  /* Video: estilo base (para escritorio) */
+}
+.beneficios-container h2 {
+  text-align: center;
+  color: #3a7bd5;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+.beneficios-container .beneficios-card {
+  background-color: #f5f9ff;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  /* Efecto hover en las cards */
+  /* Título dentro de cada card */
+  /* Texto */
+}
+.beneficios-container .beneficios-card :hover {
+  transform: translateY(-5px);
+}
+.beneficios-container .beneficios-card h3 {
+  color: #00d2ff;
+  margin-bottom: 1rem;
+}
+.beneficios-container .beneficios-card p {
+  color: #666666;
+  line-height: 1.5;
+}
+.beneficios-container .video-beneficio {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  display: block;
+}
+
+/* Responsive para móviles */
+@media (max-width: 767px) {
+  .video-beneficio {
+    max-width: 100%; /* Aprovechar todo el ancho disponible en móvil */
+  }
+  .beneficios-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .beneficios-card {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+/* Responsive para grid de beneficios en pantallas grandes */
+@media (min-width: 768px) {
+  .beneficios-cards-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .beneficios-card {
+    flex: 1 1 calc(33.333% - 1rem);
+    margin-bottom: 0;
+  }
+}
+/* Ajuste para pantallas medianas (notebooks) */
+@media (max-width: 1200px) and (min-width: 768px) {
+  .video-beneficio {
+    max-width: 90%;
+    margin: 1.5rem auto;
+  }
+}
+/* Tabla de beneficios de los suplementos */
+.tabla-beneficios {
+  border: 1px solid #3a7bd5;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  /* Ancho y alto */
+}
+.tabla-beneficios th,
+.tabla-beneficios td {
+  padding: 1rem;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+}
+.tabla-beneficios thead {
+  background-color: #3a7bd5;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .tabla-beneficios {
+    font-size: 0.9rem;
+  }
+}
+/* Testimonios - contenedor principal */
+.testimonios-container {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  /* Titulo */
+}
+.testimonios-container h2 {
+  text-align: center;
+  color: #3a7bd5;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* Testimonio individual */
+.testimonio-card {
+  background-color: #f5f9ff;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-style: italic;
+  color: #666666;
+}
+
+/* Nombre del autor */
+.testimonio-autor {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #3a7bd5;
+  text-align: right;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .testimonios-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .testimonio-card {
+    flex: 1 1 45%;
+  }
+}
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Mixin */
+
+/*# sourceMappingURL=style.css.map */

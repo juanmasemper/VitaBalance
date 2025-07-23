@@ -1,0 +1,35 @@
+@use "../utilities/variables" as *;
+@use "../utilities/extend" as *;
+
+.btn-success {
+    background-color: $color-boton;
+    border-color: $color-boton;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    border-radius: $border-radius;
+    transition: background-color $transition-duracion;
+  }
+  .btn-success:hover {
+    background-color: $color-boton-hover;
+    border-color: $color-boton-hover;
+  }
+
+.more-button {
+  @extend .btn-base;
+  background-color: $color-secundario;
+  color: white;
+
+  &:hover {
+    background-color: darken($color-secundario, 10%);
+  }
+}
+
+.buy-button {
+  @extend .btn-base;
+  background-color: $color-primario;
+  color: white;
+
+  &:hover {
+    background-color: darken($color-primario, 10%);
+  }
+}
