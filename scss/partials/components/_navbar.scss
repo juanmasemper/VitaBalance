@@ -1,0 +1,62 @@
+@use "../utilities/variables" as *;
+
+/* Navbar */
+
+/* Estilos para los enlaces */
+a {
+  color: $color-primario; /* Usamos la variable de color primario */
+  text-decoration: none;  /* Quitamos el subrayado */
+  transition: color $transition-duracion; /* Usamos la variable de duración de transición */
+  :hover,
+  :focus {
+    color: $color-secundario; /* Cambiamos el color al pasar el mouse */
+    outline: none; /* Quitamos el borde de enfoque */
+    text-decoration: none; /* Aseguramos que no aparezca subrayado */
+  }
+}
+
+header {
+  background-color: $color-fondo; /* Usamos la variable de color de fondo */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $espaciado-base; /* Usamos la variable de espaciado base */
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+}
+
+nav a {
+  display: block;
+  margin: 0.5rem 0;
+  margin-left: 1rem;
+  font-weight: 500;
+  color: $color-texto; /* Usamos la variable de color de texto */
+  :hover {
+    color: $color-primario; /* Cambiamos el color al pasar el mouse */
+  }
+}
+
+
+/* Mejorar navbar en responsive */
+.navbar-collapse {
+  background-color: $color-fondo; /* Usamos la variable de color de fondo */
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,15 @@
+@use "../utilities/variables" as *;
+
+body {
+  font-family: $font-principal;
+  font-size: $font-tamano-medio;
+}
+
+h2 {
+  font-size: $font-tamano-grande;
+  font-family: $font-secundaria;
+}
+
+p {
+  font-size: $font-tamano-pequeno;
+}

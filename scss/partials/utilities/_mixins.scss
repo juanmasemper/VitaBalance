@@ -1,0 +1,8 @@
+/* Mixin */
+
+@mixin flex ($margin, $padding, $direction) {
+    display: flex;
+    margin: $margin;
+    padding: $padding;
+    flex-direction: $direction;
+}
