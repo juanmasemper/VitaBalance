@@ -172,8 +172,8 @@ main {
 }
 
 .btn-success {
-  background-color: #3a7bd5;
-  border-color: #3a7bd5;
+  background-color: #222;
+  color: white;
   padding: 0.75rem 2rem;
   font-size: 1.1rem;
   border-radius: 6px;
@@ -181,8 +181,9 @@ main {
 }
 
 .btn-success:hover {
-  background-color: #2c5ca9;
-  border-color: #2c5ca9;
+  background-color: rgba(205, 211, 204, 0.768627451);
+  border-color: rgba(205, 211, 204, 0.768627451);
+  color: #222;
 }
 
 .more-button {
@@ -203,7 +204,7 @@ main {
 
 /* Beneficios - contenedor principal */
 .beneficios-container {
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   max-width: 1140px;
   margin: 0 auto;
   background-color: white;
@@ -211,7 +212,6 @@ main {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   /* Título de la sección beneficios */
   /* Cards de beneficios */
-  /* Video: estilo base (para escritorio) */
 }
 .beneficios-container h2 {
   text-align: center;
@@ -230,7 +230,7 @@ main {
   /* Título dentro de cada card */
   /* Texto */
 }
-.beneficios-container .beneficios-card :hover {
+.beneficios-container .beneficios-card:hover {
   transform: translateY(-5px);
 }
 .beneficios-container .beneficios-card h3 {
@@ -241,20 +241,25 @@ main {
   color: #666666;
   line-height: 1.5;
 }
-.beneficios-container .video-beneficio {
-  width: 100%;
-  max-width: 300px;
+
+/* Video: estilo base (centrado horizontal) */
+.video-beneficio {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+  max-width: 100%;
   height: auto;
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  margin: 0 auto;
-  display: block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Responsive para móviles */
 @media (max-width: 767px) {
   .video-beneficio {
-    max-width: 100%; /* Aprovechar todo el ancho disponible en móvil */
+    max-width: 100%;
   }
   .beneficios-container {
     padding-left: 1rem;
@@ -280,7 +285,7 @@ main {
 /* Ajuste para pantallas medianas (notebooks) */
 @media (max-width: 1200px) and (min-width: 768px) {
   .video-beneficio {
-    max-width: 90%;
+    width: 90%;
     margin: 1.5rem auto;
   }
 }
@@ -363,7 +368,5 @@ footer {
   font-size: 0.9rem;
   flex-shrink: 0;
 }
-
-/* Mixin */
 
 /*# sourceMappingURL=style.css.map */
