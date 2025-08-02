@@ -1,18 +1,21 @@
+@use "sass:color";
 @use "../utilities/variables" as *;
 @use "../utilities/extend" as *;
 
 .btn-success {
-    background-color: $color-boton;
-    border-color: $color-boton;
-    padding: 0.75rem 2rem;
-    font-size: 1.1rem;
-    border-radius: $border-radius;
-    transition: background-color $transition-duracion;
-  }
-  .btn-success:hover {
-    background-color: $color-boton-hover;
-    border-color: $color-boton-hover;
-  }
+  background-color: $color-boton;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: $border-radius;
+  transition: background-color $transition-duracion;
+}
+
+.btn-success:hover {
+  background-color: $color-boton-hover;
+  border-color: $color-boton-hover;
+  color: $color-boton;
+}
 
 .more-button {
   @extend .btn-base;
@@ -20,7 +23,7 @@
   color: white;
 
   &:hover {
-    background-color: darken($color-secundario, 10%);
+    background-color: color.adjust($color-secundario, $lightness: -10%);
   }
 }
 
@@ -30,6 +33,6 @@
   color: white;
 
   &:hover {
-    background-color: darken($color-primario, 10%);
+    background-color: color.adjust($color-primario, $lightness: -10%);
   }
 }
