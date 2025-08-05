@@ -144,7 +144,7 @@ main {
   color: white;
   padding: 1rem;
 }
-.hero h2 {
+.hero h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -357,6 +357,38 @@ main {
   }
   .testimonio-card {
     flex: 1 1 45%;
+  }
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent;
+}
+
+.carousel-item {
+  text-align: center;
+}
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+.carousel-inner {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    padding: 1rem;
   }
 }
 /* Footer */

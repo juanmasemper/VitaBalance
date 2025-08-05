@@ -1,0 +1,35 @@
+// Personalización de flechas del carousel
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%); // convierte blanco a negro
+}
+
+// Opcional: quitar fondo gris de los botones
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent;
+}
+
+.carousel-item {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.carousel-inner {
+  overflow: hidden;
+  border-radius: 0.5rem; // Opcional, si querés esquinas redondeadas
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    padding: 1rem;
+  }
+}
