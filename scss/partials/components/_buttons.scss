@@ -2,6 +2,7 @@
 @use "../utilities/variables" as *;
 @use "../utilities/extend" as *;
 
+/* Botón base de éxito */
 .btn-success {
   background-color: $color-boton;
   color: white;
@@ -9,15 +10,36 @@
   font-size: 1.1rem;
   border-radius: $border-radius;
   transition: background-color $transition-duracion;
+
+  &:hover {
+    background-color: $color-boton-hover;
+    border-color: $color-boton-hover;
+    color: $color-boton;
+  }
 }
 
-.btn-success:hover {
-  background-color: $color-boton-hover;
-  border-color: $color-boton-hover;
-  color: $color-boton;
+/* Contenedor de botones */
+.botonera {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
+/* Botón "Ver más" */
 .more-button {
+  @extend .btn-base;
+  background-color: $color-terciario;
+  color: white;
+
+  &:hover {
+    background-color: color.adjust($color-terciario, $lightness: -10%);
+  }
+}
+
+/* Botón "Comprar" */
+.buy-button {
   @extend .btn-base;
   background-color: $color-secundario;
   color: white;
@@ -27,12 +49,10 @@
   }
 }
 
-.buy-button {
-  @extend .btn-base;
-  background-color: $color-primario;
-  color: white;
-
-  &:hover {
-    background-color: color.adjust($color-primario, $lightness: -10%);
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .botonera {
+    flex-direction: column;
+    gap: 1rem;
   }
 }

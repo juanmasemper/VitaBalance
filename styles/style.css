@@ -42,7 +42,7 @@ a {
 }
 a :hover,
 a :focus {
-  color: #00d2ff; /* Cambiamos el color al pasar el mouse */
+  color: #2b8b41; /* Cambiamos el color al pasar el mouse */
   outline: none; /* Quitamos el borde de enfoque */
   text-decoration: none; /* Aseguramos que no aparezca subrayado */
 }
@@ -171,6 +171,7 @@ main {
   transition: background-color 0.3s ease;
 }
 
+/* Botón base de éxito */
 .btn-success {
   background-color: #222;
   color: white;
@@ -179,70 +180,112 @@ main {
   border-radius: 6px;
   transition: background-color 0.3s;
 }
-
 .btn-success:hover {
   background-color: rgba(205, 211, 204, 0.768627451);
   border-color: rgba(205, 211, 204, 0.768627451);
   color: #222;
 }
 
+/* Contenedor de botones */
+.botonera {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* Botón "Ver más" */
 .more-button {
-  background-color: #00d2ff;
+  background-color: #242424;
   color: white;
 }
 .more-button:hover {
-  background-color: #00a8cc;
+  background-color: rgb(10.5, 10.5, 10.5);
 }
 
+/* Botón "Comprar" */
 .buy-button {
-  background-color: #3a7bd5;
+  background-color: #2b8b41;
   color: white;
 }
 .buy-button:hover {
-  background-color: rgb(38.6610878661, 98.4937238494, 181.3389121339);
+  background-color: rgb(30.9505494505, 100.0494505495, 46.7857142857);
 }
 
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .botonera {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
 /* Beneficios - contenedor principal */
 .beneficios-container {
   padding: 1rem 1rem;
   max-width: 1140px;
   margin: 0 auto;
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  /* Título de la sección beneficios */
-  /* Cards de beneficios */
 }
 .beneficios-container h1 {
   text-align: center;
-  color: #3a7bd5;
   margin-bottom: 1.5rem;
   font-weight: 700;
 }
-.beneficios-container .beneficios-card {
+.beneficios-container .beneficio-card {
+  position: relative;
   background-color: #f5f9ff;
   border-radius: 6px;
   padding: 1.5rem;
-  margin-bottom: 1rem;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  /* Efecto hover en las cards */
-  /* Título dentro de cada card */
-  /* Texto */
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.beneficios-container .beneficios-card:hover {
-  transform: translateY(-5px);
+.beneficios-container .beneficio-card:hover {
+  transform: translateY(-6px);
+  background-color: rgb(245.5, 249.3, 255);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
-.beneficios-container .beneficios-card h3 {
-  color: #00d2ff;
+.beneficios-container .beneficio-card:hover .hover-icon {
+  opacity: 1;
+  transform: translateY(0);
+}
+.beneficios-container .beneficio-card h3 {
+  color: #242424;
   margin-bottom: 1rem;
 }
-.beneficios-container .beneficios-card p {
+.beneficios-container .beneficio-card p {
   color: #666666;
   line-height: 1.5;
 }
+.beneficios-container .beneficio-card .hover-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #242424;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
 
-/* Video: estilo base (centrado horizontal) */
+/* Modal de beneficio */
+.modal-content {
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: #242424;
+  color: white;
+  border-bottom: none;
+}
+
+.modal-header .btn-close {
+  filter: brightness(0) invert(1);
+  opacity: 1;
+}
+
+/* Video */
 .video-beneficio {
   display: block;
   margin-left: auto;
@@ -256,7 +299,7 @@ main {
   margin-bottom: 2rem;
 }
 
-/* Responsive para móviles */
+/* Responsive: Móvil */
 @media (max-width: 767px) {
   .video-beneficio {
     max-width: 100%;
@@ -265,24 +308,25 @@ main {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .beneficios-card {
+  .beneficio-card {
     width: 100%;
     margin-bottom: 1.5rem;
   }
 }
-/* Responsive para grid de beneficios en pantallas grandes */
+/* Responsive: Grid en pantallas grandes */
 @media (min-width: 768px) {
   .beneficios-cards-row {
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
   }
-  .beneficios-card {
-    flex: 1 1 calc(33.333% - 1rem);
-    margin-bottom: 0;
+  .beneficio-card {
+    flex: 1 1 300px;
+    max-width: 320px;
   }
 }
-/* Ajuste para pantallas medianas (notebooks) */
+/* Ajuste para notebooks */
 @media (max-width: 1200px) and (min-width: 768px) {
   .video-beneficio {
     width: 90%;
